@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="selectedId"
+            type="androidx.lifecycle.MutableLiveData&lt;Integer>"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_blank_fragment" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:checkedButton="@={selectedId}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radio_button__single_player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Single player" />
+
+            <RadioButton
+                android:id="@+id/radio_button__two_player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Two Player" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button__next_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go to next Fragment"/>
+    </LinearLayout>
+</layout>
